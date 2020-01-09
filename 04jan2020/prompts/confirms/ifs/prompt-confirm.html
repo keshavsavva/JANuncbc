@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prompts/Confirms</title>
+        <script>
+            alert("Hello Wolrd!");
+
+            var doYouRock = confirm("The question is, do you rock?");
+            // provides an alert that you can respond with "ok" or "cancel", the variable stores a true or false variable
+
+            if(doYouRock === true) {
+                var howMuchRock = prompt("How much do you rock?");
+            } else {
+                console.log("I understand")
+            }
+            // use if/else statements to add additional control
+            // inside if/else statements you can use || to represent OR and && to represent AND to make further specific statements
+            // if the then command has multiple lines then you need to wrap the command in {}
+
+            
+
+            console.log("doYouRock: " + doYouRock);
+            console.log("howMuchRock: " + howMuchRock);
+            // this displays if I rock or not in the console log
+            // Adding the quotes helps keep console log organized so you know what variables are displayed
+            // can also seperate variables within same cosole log command by comma to print on same line
+            console.log(doYouRock, howMuchRock);
+        </script>
+    </head>
+</html>
