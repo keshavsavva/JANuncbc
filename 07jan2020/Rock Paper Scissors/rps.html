@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        var wins = 0;
+        var ties = 0;
+        var losses = 0;
+        for (var i = 0; i < 1; i++) {
+
+       
+            var hands = ["rock", "paper", "scissors"];
+            // Create array of possible hands
+            var num = Math.floor(Math.random() * hands.length);
+            // pick random number between 0-2
+            var user = prompt("Rock, Paper, or Scissors?");
+            // ask user what hand they want to pick
+            var you = user.toLowerCase();
+            // change string to all lower case so it can be compared to computer answer
+            var cpu = hands[num];
+            // index the number into the hand so one of three options is randomly chosen
+            console.log(you);
+            console.log(cpu);
+            // log user and computer answers to help with development
+            if (you !== "rock" && you !== "paper" && you !== "scissors"){
+                alert("invalid input! You have " + wins + " wins, " + ties + " ties, and " + losses + " losses");
+            } else if ((you === "rock" && cpu === "scissors")||(you === "scissors" && cpu === "paper")||(you === "paper" && cpu === "rock")) {
+                wins++;
+                alert("You Won! The computer picked " + cpu + "! You have " + wins + " wins, " + ties + " ties, and " + losses + " losses");
+            } else if(you === cpu) {
+                ties++;
+                alert("You Tied! We both picked " + cpu + "! You have " + wins + " wins, " + ties + " ties, and " + losses + " losses");
+            } else { 
+                losses++;
+                alert("You Lost! The computer picked " + cpu + "! You have " + wins + " wins, " + ties + " ties, and " + losses + " losses");
+            }
+            // if else statements to run the game
+            var again = confirm("Would you like to play again?");
+            if (again) {
+                i = i - 1;
+            }
+        }
+        alert("Hope you had fun! You finished with " + wins + " wins, " + ties + " ties, and " + losses + " losses!");
+    </script>
+</body>
+</html>
